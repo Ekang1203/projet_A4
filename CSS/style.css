@@ -1,0 +1,122 @@
+/* Styles généraux */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  background-color: #f4f4f9;
+  color: #333;
+}
+a {
+  text-decoration: none;
+  color: #007BFF;
+}
+header {
+  background: #007BFF;
+  color: white;
+  padding: 1rem 0;
+  text-align: center;
+}
+header h1 {
+  margin: 0;
+  font-size: 2.5rem;
+}
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 10px;
+}
+nav a {
+  color: white;
+  font-weight: bold;
+}
+
+/* Section d'intro */
+.intro {
+  text-align: center;
+  padding: 2rem 1rem;
+  background: #e9f5ff;
+}
+.intro h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+.intro button {
+  background: #007BFF;
+  color: white;
+  border: none;
+  padding: 0.7rem 1.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.intro button:hover {
+  background: #0056b3;
+}
+
+/* Section à propos */
+.about, .actions, .join-us {
+  padding: 2rem 1rem;
+  text-align: center;
+}
+.about h2, .actions h2, .join-us h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+.about p, .actions p {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Nos actions */
+.actions .cards {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+.actions .card {
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 1rem;
+  width: 300px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.actions .card h3 {
+  margin-top: 0;
+}
+
+/* Rejoignez-nous */
+.join-us form {
+  max-width: 400px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.join-us form input, .join-us form textarea, .join-us form button {
+  padding: 0.7rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+.join-us form button {
+  background: #007BFF;
+  color: white;
+  cursor: pointer;
+  border: none;
+}
+.join-us form button:hover {
+  background: #0056b3;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem 0;
+  background: #007BFF;
+  color: white;
+  margin-top: 2rem;
+}
