@@ -17,9 +17,9 @@ header {
 
 header .logo {
   display: block;
-    margin: 0 auto;
-    max-width: 200px; /* Ajuste la taille du logo */
-    height: auto;
+  margin: 0 auto;
+  max-width: 200px; /* Ajuste la taille du logo */
+  height: auto;
 }
 /* Ligne de séparation sous le logo */
 .header-divider {
