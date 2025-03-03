@@ -1,63 +1,69 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sunu-tos</title>
-  <link rel="stylesheet" href="../CSS/style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600&family=Poetsen+One&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SunuTos</title>
+    <link rel="stylesheet" href="../CSS/style.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script> <!-- Importation des icônes FontAwesome -->
 </head>
 <body>
-  <img src="..\images\Logo final C - slogan FR.png" alt="Sunu-tos" class="site-logo">
-  <header>
-     <hr class="header-divider">
+
+    <header>
+        <div class="logo">🌿</div>
+        <h1 class="site-title">SunuTos</h1>
+        <div class="lang">
+            <span>🌍</span>
+        </div>
+    </header>
+
+    <div class="separator"></div>
+
     <nav>
-      <a href="\A propos.html">À propos</a>
-      <a href="#actions">Nos actions</a>
-      <a href="#contact">Contact</a>
+        <div class="nav-container">
+            <ul>
+                <li><i class="fas fa-home"></i> <a href="#">Accueil</a></li>
+                <li><i class="fas fa-info-circle"></i> <a href="#">À propos</a></li>
+                <li><i class="fas fa-book"></i> <a href="#">Documentation</a></li>
+            </ul>
+            <a href="#" class="don">Don</a>
+        </div>
     </nav>
-  </header>
-  <section class="intro">
-    <h2>Bienvenue sur Sunu-tos</h2>
-    <p>Faites partie du changement et contribuez à nos projets solidaires.</p>
-    <button>En savoir plus</button>
-  </section>
 
-  <section class="about" id="about">
-    <h2>À propos de Sunu-tos</h2>
-    <p>Sunu-tos est une association dédiée à promouvoir le bien-être et la solidarité au sein de notre communauté.</p>
-  </section>
+    <div class="separator"></div>
 
-  <section class="actions" id="actions">
-    <h2>Nos actions</h2>
-    <div class="cards">
-      <div class="card">
-        <h3>Action 1</h3>
-        <p>Description de l'action 1. Nous aidons les communautés locales à...</p>
-      </div>
-      <div class="card">
-        <h3>Action 2</h3>
-        <p>Description de l'action 2. Notre mission inclut...</p>
-      </div>
-      <div class="card">
-        <h3>Action 3</h3>
-        <p>Description de l'action 3. Découvrez comment nous...</p>
-      </div>
-    </div>
-  </section>
+    <main>
+        <section class="left">
+            <h2>Qui sommes-nous ?</h2>
+            <h2>Nos projets déjà réalisés</h2>
+            <a href="#">Voir autres projets</a>
+            <h2>Actualités</h2>
+        </section>
 
-  <section class="join-us" id="contact">
-    <h2>Rejoignez-nous</h2>
-    <form>
-      <input type="text" name="name" placeholder="Votre nom" required>
-      <input type="email" name="email" placeholder="Votre email" required>
-      <textarea name="message" rows="5" placeholder="Votre message" required></textarea>
-      <button type="submit">Envoyer</button>
-    </form>
-  </section>
+        <section class="right">
+            <h2>Carte interactive</h2>
+            <div class="map-placeholder">[Carte ici]</div>
 
-  <footer>
-    <p>&copy; 2025 Sunu-tos. Tous droits réservés.</p>
-  </footer>
+            <h2>Statistiques</h2>
+
+            <h2>Formulaire</h2>
+        </section>
+
+        <section class="center">
+            <h2>Newsletter</h2>
+        </section>
+    </main>
+
+    <div class="separator"></div>
+
+    <footer>
+        <h2>Contactez-nous :</h2>
+        <ul>
+            <li>Email</li>
+            <li>Réseaux sociaux</li>
+            <li>Téléphone</li>
+        </ul>
+    </footer>
+
 </body>
 </html>
