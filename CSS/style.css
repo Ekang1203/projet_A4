@@ -79,6 +79,35 @@ nav ul li a {
   position: relative;
 }
 
+
+/* Accueil actif */
+#page-accueil nav ul li a[href="accueil.html"] {
+  color: white;
+  background-color: #A4C88C;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+/* À propos actif (si on est sur projets, partenaires et contact ou histoire de l'association) */
+#page-projets nav ul li a[href="##"],
+#page-parten_et_cont nav ul li a[href="##"],
+#page-histoire_assoc nav ul li a[href="##"] {
+  color: white;
+  background-color: #A4C88C;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+/* Documentation actif (si on est sur articles ou tutos) */
+#page-articles nav ul li a[href="#"],
+#page-tutos nav ul li a[href="#"] {
+  color: white;
+  background-color: #A4C88C;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+
 /* Flèche ▼ à droite des éléments avec sous-menu */
 .arrow {
   font-size: 12px;
