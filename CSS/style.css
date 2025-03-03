@@ -1,122 +1,129 @@
-/* Styles généraux */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  line-height: 1.6;
-  background-color: #f4f4f9;
-  color: #333;
+  background-color: #f5f5f5;
+  color: #3b341f;
 }
-a {
-  text-decoration: none;
-  color: #007BFF;
-}
+
 header {
-  background: #007BFF;
-  color: white;
-  padding: 1rem 0;
+  background-color: #7aa95c;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+}
+
+header .logo {
+  font-size: 24px;
+}
+
+.site-title {
+  flex-grow: 1;
   text-align: center;
+  font-size: 24px;
+  color: white;
 }
-header h1 {
-  margin: 0;
-  font-size: 2.5rem;
+
+.lang {
+  font-size: 20px;
+  cursor: pointer;
 }
+
+.separator {
+  background-image: url('neem-leaves.png'); /* Ajoute une vraie image de feuilles de neem */
+  background-size: contain;
+  background-repeat: repeat-x;
+  height: 40px;
+}
+
 nav {
   display: flex;
   justify-content: center;
-  gap: 15px;
-  margin-top: 10px;
+  padding: 10px 0;
 }
-nav a {
-  color: white;
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  align-items: center;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 18px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #3b341f;
   font-weight: bold;
 }
 
-/* Section d'intro */
-.intro {
-  text-align: center;
-  padding: 2rem 1rem;
-  background: #e9f5ff;
-}
-.intro h2 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-}
-.intro button {
-  background: #007BFF;
+/* Bouton Don aligné à droite */
+.don {
+  background-color: #3b341f;
   color: white;
-  border: none;
-  padding: 0.7rem 1.5rem;
-  font-size: 1rem;
-  cursor: pointer;
+  padding: 5px 15px;
   border-radius: 5px;
-}
-.intro button:hover {
-  background: #0056b3;
+  text-decoration: none;
 }
 
-/* Section à propos */
-.about, .actions, .join-us {
-  padding: 2rem 1rem;
-  text-align: center;
-}
-.about h2, .actions h2, .join-us h2 {
-  font-size: 1.8rem;
-  margin-bottom: 1rem;
-}
-.about p, .actions p {
-  max-width: 600px;
-  margin: 0 auto;
-}
-
-/* Nos actions */
-.actions .cards {
+main {
   display: flex;
-  justify-content: center;
-  gap: 20px;
   flex-wrap: wrap;
-  margin-top: 1rem;
-}
-.actions .card {
-  background: white;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  padding: 1rem;
-  width: 300px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-.actions .card h3 {
-  margin-top: 0;
+  justify-content: space-between;
+  padding: 20px;
 }
 
-/* Rejoignez-nous */
-.join-us form {
-  max-width: 400px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
+.left {
+  width: 40%;
+  text-align: left;
 }
-.join-us form input, .join-us form textarea, .join-us form button {
-  padding: 0.7rem;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  font-size: 1rem;
+
+.right {
+  width: 50%;
+  text-align: left; /* Alignement avec la carte */
 }
-.join-us form button {
-  background: #007BFF;
-  color: white;
-  cursor: pointer;
-  border: none;
+
+.center {
+  width: 100%;
+  text-align: center;
+  margin-top: 20px;
 }
-.join-us form button:hover {
-  background: #0056b3;
+
+.map-placeholder {
+  background-color: #ddd;
+  height: 200px;
+  width: 80%;
+  text-align: center;
+  line-height: 200px;
+  color: #3b341f;
 }
 
 footer {
-  text-align: center;
-  padding: 1rem 0;
-  background: #007BFF;
+  background-color: #3b341f;
   color: white;
-  margin-top: 2rem;
+  text-align: left;
+  padding: 20px;
+}
+
+footer ul {
+  list-style: none;
+  padding: 0;
+}
+
+footer ul li {
+  margin: 5px 0;
 }
