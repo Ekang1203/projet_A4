@@ -1,7 +1,8 @@
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Nunito',sans-serif;
   margin: 0;
   padding: 0;
+  line-height: 1.6;
   background-color: #f5f5f5;
   color: #3b341f;
 }
@@ -16,6 +17,14 @@ header {
 
 header .logo {
   font-size: 24px;
+}
+/* Ligne de séparation sous le logo */
+.header-divider {
+  width: 100%;
+  height: 40px;
+  background: url('../images/feuille_1.png') repeat-x center;
+  background-size: contain;
+  border: none;
 }
 
 .site-title {
