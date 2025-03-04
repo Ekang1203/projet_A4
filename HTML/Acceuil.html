@@ -5,13 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sunu-Tos</title>
     <link rel="stylesheet" href="../CSS/style.css">
+
+    <!-- Intégration de la bibliothèque Leaflet pour la carte interactive -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script> <!-- Importation des icônes FontAwesome -->
 </head>
 <body id="page-accueil">
 
     <header>
-        <div class="logo">🌿</div>
-        <h1 class="site-title">SunuTos</h1>
+        <div class="logo">🌿</div> <!-- Icône emoji comme logo -->
+        <img src="..\images\Logo final C - slogan FR.png" alt="Sunu-tos" class="site-title"> <!-- Logo image -->
         <div class="lang">
             <span>🌍</span>
         </div>
@@ -22,30 +27,28 @@
     <nav>
       <div class="nav-container">
           <ul>
-              <li><i class="fas fa-home"></i> <a href="accueil.html">Accueil</a></li>
-  
+              <li class="leaf-hover"><i class="fas fa-home"></i> <a href="#">Accueil</a></li>
+
               <li class="dropdown">
-                  <a href="##">À propos <span class="arrow">▼</span></a>
+                  <a href="#">À propos <span class="arrow">▼</span></a>
                   <ul class="dropdown-menu">
-                      <li><a href="projets.html">Projets</a></li>
-                      <li><a href="parten_et_cont.html">Partenaires et Contact</a></li>
-                      <li><a href="histoire_assoc.html">Histoire de l'association</a></li>
+                      <li><a href="#">Projets</a></li>
+                      <li><a href="#">Partenaires et Contact</a></li>
+                      <li><a href="#">Histoire de l'association</a></li>
                   </ul>
               </li>
-  
+
               <li class="dropdown">
                   <a href="#">Documentation <span class="arrow">▼</span></a>
                   <ul class="dropdown-menu">
-                      <li><a href="articles.html">Articles</a></li>
-                      <li><a href="tutos.html">Tutos</a></li>
+                      <li><a href="#">Articles</a></li>
+                      <li><a href="#">Tutos</a></li>
                   </ul>
               </li>
           </ul>
-          <a href="dons.html" class="don">Don</a>
+          <a href="#" class="don">Don</a>
       </div>
-  </nav>
-
-   
+    </nav>
 
     <main>
         <section class="left">
@@ -57,10 +60,39 @@
 
         <section class="right">
             <h2>Carte interactive</h2>
-            <div class="map-placeholder">[Carte ici]</div>
+            <div id="map" style="height: 400px; width: 100%;"></div> <!-- Taille de la carte -->
+
+            <!-- Formulaire de recherche pour la carte -->
+            <div>
+                <label for="region">Sélectionner la région :</label>
+                <select id="region" onchange="filterData()">
+                    <option value="">Toutes les régions</option>
+                    <option value="Dakar">Dakar</option>
+                    <option value="Saint-Louis">Saint-Louis</option>
+                    <option value="Thiès">Thiès</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="type">Sélectionner le type de projet :</label>
+                <select id="type" onchange="filterData()">
+                    <option value="">Tous les types</option>
+                    <option value="Toilettes sèches">Toilettes sèches</option>
+                    <option value="Compostage">Compostage</option>
+                    <option value="Fournisseur de litière">Fournisseur de litière</option>
+                </select>
+            </div>
+
+            <!-- Formulaire d'ajout de projet -->
+            <form id="ajoutProjetForm">
+                <input type="text" id="nomProjet" placeholder="Nom du projet" required>
+                <textarea id="descProjet" placeholder="Description"></textarea>
+                <input type="text" id="categorieProjet" placeholder="Catégorie">
+                <input type="date" id="dateProjet">
+                <button type="submit">Ajouter Projet</button>
+            </form>
 
             <h2>Statistiques</h2>
-
             <h2>Formulaire</h2>
         </section>
 
@@ -81,14 +113,14 @@
                   <li>Téléphone</li>
               </ul>
           </div>
-  
+
           <div class="comment-section">
               <h2>Commentaire</h2>
               <textarea placeholder="Écrivez votre commentaire ici..."></textarea>
           </div>
       </div>
-  </footer>
-  
+    </footer>
 
+    <script src="../JS/map.js"></script> <!-- Script pour gérer la carte -->
 </body>
 </html>
