@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faire un Don - SunuTos</title>
+    <link rel="stylesheet" href="../CSS/style.css" href="../CSS/dons.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script> <!-- Importation des icônes FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body id="page-dons">
+
+    <header>
+        <a href="accueil.html" class="logo">
+            <i class="fas fa-home"></i>
+          </a>
+          <h1 class="site-title">SunuTos</h1>
+          <div class="lang">
+            <span>🌍</span>
+          </div>
+    </header>
+
+    <div class="separator"></div>
+
+    <nav>
+        <div class="nav-container">
+            <ul>
+                <li><i class="fas fa-home"></i> <a href="accueil.html">Accueil</a></li>
+    
+                <li class="dropdown">
+                    <a href="##"><i class="fas fa-info-circle"></i>À propos <span class="arrow">▼</span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="projets.html">Projets</a></li>
+                        <li><a href="parten_et_cont.html">Partenaires et Contact</a></li>
+                        <li><a href="histoire_assoc.html">Histoire de l'association</a></li>
+                    </ul>
+                </li>
+    
+                <li class="dropdown">
+                    <a href="#"><i class="fas fa-book"></i>Documentation <span class="arrow">▼</span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="articles.html">Articles</a></li>
+                        <li><a href="tutos.html">Tutos</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <a href="dons.html" class="don"><i class="fas fa-dollar-sign"></i>Don</a>
+        </div>
+    </nav>
+
+    
+
+    <main class="don-container">
+        <section class="don-intro">
+            <h2>Faites un Don et Soutenez notre Mission</h2>
+            <p>Votre don permet à SunuTos d’installer davantage de **toilettes à compost** dans les zones rurales du Sénégal.<br> 
+               Grâce à vous, nous améliorons les conditions sanitaires et protégeons l’environnement.</p>
+        </section>
+
+        <section class="don-options">
+            <h3>Choisissez un montant :</h3>
+            <div class="don-buttons">
+                <button class="don-amount" data-amount="5">5€</button>
+                <button class="don-amount" data-amount="10">10€</button>
+                <button class="don-amount" data-amount="20">20€</button>
+                <button class="don-amount" data-amount="50">50€</button>
+            </div>
+
+            <h3>Ou entrez un montant personnalisé :</h3>
+            <input type="number" id="custom-amount" placeholder="Montant en €">
+            <button class="don-submit">Faire un Don</button>
+        </section>
+    </main>
+
+    <div class="separator"></div>
+
+    <footer>
+        <div class="footer-container">
+            <div class="contact-section">
+                <h2>Contactez-nous :</h2>
+                <ul>
+                    <li>Email</li>
+                    <li>Réseaux sociaux</li>
+                    <li>Téléphone</li>
+                </ul>
+            </div>
+
+            <div class="comment-section">
+                <h2>Commentaire</h2>
+                <textarea placeholder="Écrivez votre commentaire ici..."></textarea>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        let selectedAmount = 0;
+
+        document.querySelectorAll(".don-amount").forEach(button => {
+            button.addEventListener("click", function () {
+                selectedAmount = this.getAttribute("data-amount");
+                document.getElementById("custom-amount").value = selectedAmount;
+            });
+        });
+
+        document.querySelector(".don-submit").addEventListener("click", function () {
+            let amount = document.getElementById("custom-amount").value;
+            if (amount > 0) {
+                alert("Redirection vers le paiement de " + amount + "€");
+                // Ici, tu peux ajouter une redirection vers un système de paiement comme PayPal ou Stripe
+            } else {
+                alert("Veuillez entrer un montant valide !");
+            }
+        });
+    });
+</script>
