@@ -2,13 +2,14 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f5f5f5;
+  background-color: white;
   color: #3b341f;
+  text-align: center;
 }
 
-/* Header avec un vert plus clair */
+/* Header */
 header {
-  background-color: #c0eeb0; /* Vert clair */
+  background-color: white;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -18,24 +19,13 @@ header {
 header .logo {
   font-size: 24px;
 }
+
 .logo {
-  font-size: 24px;
-  color: white; /* Maison blanche */
-  text-decoration: none;
-  padding: 10px;
   display: flex;
-  align-items: center;
-}
-
-.logo i {
-  font-size: 28px;
-}
-
-.site-title {
-  flex-grow: 1;
-  text-align: center;
-  font-size: 24px;
-  color: #3b341f;
+  justify-content: center;
+  margin: auto;
+  max-width: 300px;
+  height: auto;
 }
 
 .lang {
@@ -43,7 +33,7 @@ header .logo {
   cursor: pointer;
 }
 
-/* Séparateur en feuilles de neem avec un vert plus clair */
+/* Séparateur en feuilles */
 .separator {
   background-image: url('../images/feuille_1.png');
   background-size: contain;
@@ -52,18 +42,11 @@ header .logo {
   background-color: #BFD8A5;
 }
 
-/* Style de la navigation */
+/* Navigation */
 nav {
   display: flex;
   justify-content: center;
   padding: 10px 0;
-}
-
-.nav-container {
-  display: flex;
-  justify-content: space-between;
-  width: 80%;
-  align-items: center;
 }
 
 nav ul {
@@ -83,47 +66,12 @@ nav ul li {
   position: relative;
 }
 
-/* Style des liens */
 nav ul li a {
   text-decoration: none;
   color: #3b341f;
   font-weight: bold;
   position: relative;
 }
-nav ul li i {
-  margin-right: 8px; /* Espacement entre l'icône et le texte */
-  font-size: 18px; /* Taille des icônes */
-  color: #3b341f; /* Couleur des icônes */
-}
-
-
-/* Accueil actif */
-#page-accueil nav ul li a[href="accueil.html"] {
-  color: white;
-  background-color: #A4C88C;
-  padding: 5px 10px;
-  border-radius: 5px;
-}
-
-/* À propos actif (si on est sur projets, partenaires et contact ou histoire de l'association) */
-#page-projets nav ul li a[href="##"],
-#page-parten_et_cont nav ul li a[href="##"],
-#page-histoire_assoc nav ul li a[href="##"] {
-  color: white;
-  background-color: #A4C88C;
-  padding: 5px 10px;
-  border-radius: 5px;
-}
-
-/* Documentation actif (si on est sur articles ou tutos) */
-#page-articles nav ul li a[href="#"],
-#page-tutos nav ul li a[href="#"] {
-  color: white;
-  background-color: #A4C88C;
-  padding: 5px 10px;
-  border-radius: 5px;
-}
-
 
 /* Flèche ▼ à droite des éléments avec sous-menu */
 .arrow {
@@ -131,7 +79,7 @@ nav ul li i {
   margin-left: 5px;
 }
 
-/* Style des menus déroulants */
+/* Menu déroulant */
 .dropdown-menu {
   display: none;
   position: absolute;
@@ -146,12 +94,10 @@ nav ul li i {
   z-index: 10;
 }
 
-/* Affichage du menu au survol */
 .dropdown:hover .dropdown-menu {
   display: block;
 }
 
-/* Style des éléments du menu déroulant */
 .dropdown-menu li {
   padding: 10px;
   list-style: none;
@@ -165,84 +111,32 @@ nav ul li i {
 }
 
 .dropdown-menu li a:hover {
-  background-color: #E3D9C6; /* Marron clair */
+  background-color: #E3D9C6;
   border-radius: 5px;
 }
 
-
-/* Bouton Don avec un marron plus clair */
-.don {
-  background-color: #E3D9C6; /* Marron clair */
-  color: #3b341f;
-  padding: 10px 20px;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 18px;
-  display: inline-flex;
-  align-items: center;
-  gap: 8px; /* Espacement entre l'icône et le texte */
-  transition: background-color 0.3s ease, color 0.3s ease;
-}
-.don i {
-  font-size: 20px; /* Taille de l'icône */
-}
-
-/* Effet de survol : tout devient vert */
-.don:hover {
-  background-color: #A4C88C !important; /* Vert foncé */
-  color: white !important;
-}
-
+/* Contenu principal */
 main {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
   padding: 20px;
 }
 
-.left {
-  width: 40%;
-  text-align: left;
-}
-
-.right {
-  width: 50%;
-  text-align: left; /* Alignement avec la carte */
-}
-
-.center {
-  width: 100%;
-  text-align: center;
-  margin-top: 20px;
-}
-
-.map-placeholder {
-  background-color: #ddd;
-  height: 200px;
+section {
   width: 80%;
+  margin-bottom: 30px;
   text-align: center;
-  line-height: 200px;
-  color: #3b341f;
 }
 
-/* Footer avec un marron plus clair */
+/* Footer */
 footer {
-  background-color: #E3D9C6; /* Marron clair */
+  background-color: #E3D9C6;
   color: #3b341f;
   text-align: left;
   padding: 20px;
 }
 
-footer ul {
-  list-style: none;
-  padding: 0;
-}
-
-footer ul li {
-  margin: 5px 0;
-}
-/* Conteneur du footer pour aligner Contact et Commentaire */
 .footer-container {
   display: flex;
   justify-content: space-between;
@@ -250,12 +144,10 @@ footer ul li {
   padding: 20px;
 }
 
-/* Section Contactez-nous */
 .contact-section {
   width: 45%;
 }
 
-/* Section Commentaire */
 .comment-section {
   width: 45%;
 }
@@ -269,32 +161,3 @@ footer ul li {
   font-size: 14px;
   resize: none;
 }
-#map {
-  width: 100%;
-  height: 400px;
-  border-radius: 8px;
-  margin-top: 10px;
-}
-.admin-button {
-  background-color: #3b341f; /* Marron */
-  color: white;
-  padding: 10px 15px;
-  border-radius: 5px;
-  text-decoration: none;
-  font-weight: bold;
-  position: absolute;
-  right: 20px;
-  top: 20px;
-}
-
-.admin-button i {
-  margin-right: 5px;
-}
-
-.admin-button:hover {
-  background-color: #7aa95c; /* Vert */
-}
-
-
-
-
