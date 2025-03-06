@@ -3,94 +3,86 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SunuTos</title>
+    <title>Sunu-Tos</title>
+    <link rel="icon" href="..\images\Feuilles de neem Cycle Original.png" type="image/png">
     <link rel="stylesheet" href="../CSS/style.css">
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script> <!-- Importation des icônes FontAwesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <link rel="stylesheet" href="../admin/admin.css">
-    <base href="http://localhost/">
-
-
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body id="page-accueil">
-
     <header>
-        <a href="accueil.html" class="logo">
-          <i class="fas fa-home"></i>
-        </a>
-        <h1 class="site-title">SunuTos</h1>
+        <div class="menu-mobile">
+            <i class="fas fa-bars"></i>
+        </div>
+        <div class="logo-container">
+            <a href="Acceuil.html"><img src="../images/Logo final C - slogan FR.png" alt="Sunu-Tos" class="logo"></a>
+        </div>
+        <div class="header-icons">
+            <i class="fas fa-search"></i>
+            <div class="lang-select">
+                <select class="lang-dropdown" onchange="location = this.value;">
+                    <option value="index.html">🇫🇷 Français</option>
+                    <option value="index_en.html">🇬🇧 English</option>
+                    <option value="index_wo.html">🇸🇳 Wolof</option>
+                </select>
+            </div>
+            <a href="contact.html" class="contact-link">Contact</a>
+        </div>
     </header>
     <div class="separator"></div>
-
-    <nav>
-      <div class="nav-container">
-          <ul>
-              <li><i class="fas fa-home"></i> <a href="accueil.html">Accueil</a></li>
-  
-              <li class="dropdown">
-                  <a href="##"><i class="fas fa-info-circle"></i>À propos <span class="arrow">▼</span></a>
-                  <ul class="dropdown-menu">
-                      <li><a href="projets.html">Projets</a></li>
-                      <li><a href="parten_et_cont.html">Partenaires et Contact</a></li>
-                      <li><a href="histoire_assoc.html">Histoire de l'association</a></li>
-                  </ul>
-              </li>
-  
-              <li class="dropdown">
-                  <a href="#"><i class="fas fa-book"></i>Documentation <span class="arrow">▼</span></a>
-                  <ul class="dropdown-menu">
-                      <li><a href="articles.html">Articles</a></li>
-                      <li><a href="tutos.html">Tutos</a></li>
-                  </ul>
-              </li>
-          </ul>
-          <a href="dons.html" class="don"><i class="fas fa-dollar-sign"></i>Don</a>
-      </div>
-  </nav>
-  
-  <a href="../admin/login.php" class="admin-button">
-    <i class="fas fa-user-shield"></i> Admin
-  </a>
+    
+    <nav class="menu">
+        <ul>
+            <li><a href="about.html">À propos / Qui sommes-nous ?</a></li>
+            <li><a href="produits.html">Produits</a></li>
+            <li><a href="projets.html">Projets</a></li>
+            <li><a href="ressources.html">Ressources</a></li>
+            <li><a href="medias.html">Médias</a></li>
+        </ul>
+    </nav>
+    
     <main>
-        <section class="left">
-            <h2>Qui sommes-nous ?</h2>
-            <h2>Nos projets déjà réalisés</h2>
-            <a href="#">Voir autres projets</a>
-            <h2>Actualités</h2>
+        <section class="intro">
+            <h2>Description générale de l’association</h2>
+            <p>Objectifs brefs et impact de l’association.</p>
         </section>
-
-        <section class="right">
-            <h2>Carte interactive</h2>
-            <div class="map-placeholder">[Carte ici]</div>
-
-            <h2>Statistiques</h2>
-
-            <h2>Formulaire</h2>
+        
+        <section class="impact">
+            <h2>Notre impact</h2>
+            <div class="bandeau-impact">
+                <p>Nombre de projets réalisés, personnes touchées, etc.</p>
+            </div>
         </section>
-
-        <section class="center">
-            <h2>Newsletter</h2>
+        
+        <section class="produit-vedette">
+            <h2>Produit en avant</h2>
+            <p>Un type de toilette au hasard.</p>
+        </section>
+        
+        <section class="medias">
+            <h2>Médias</h2>
+            <p>Podcasts, articles, et reportages sur notre association.</p>
+        </section>
+        
+        <section class="galerie">
+            <h2>Nos projets en images</h2>
+            <div class="slider">
+                <p>Défilement des meilleures photos de projets.</p>
+            </div>
         </section>
     </main>
-
     <div class="separator"></div>
-
+    
     <footer>
-      <div class="footer-container">
-          <div class="contact-section">
-              <h2>Contactez-nous :</h2>
-              <ul>
-                  <li>Email</li>
-                  <li>Réseaux sociaux</li>
-                  <li>Téléphone</li>
-              </ul>
-          </div>
-  
-          <div class="comment-section">
-              <h2>Commentaire</h2>
-              <textarea placeholder="Écrivez votre commentaire ici..."></textarea>
-          </div>
-      </div>
-  </footer>
+        <div class="footer-content">
+            <div class="contact">
+                <h2>Nous soutenir</h2>
+                <ul>
+                    <li><a href="donation.html">Faire un don</a></li>
+                    <li><a href="contact.html">Nous contacter</a></li>
+                    <li><a href="benevolat.html">Devenir bénévole</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
