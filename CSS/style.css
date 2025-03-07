@@ -1,15 +1,21 @@
+:root {
+  --primary-color: #3b341f;
+  --secondary-color: #BFD8A5;
+  --background-color: white;
+}
+
 body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: white;
-  color: #3b341f;
+  background-color: var(--background-color);
+  color: var(--primary-color);
   text-align: center;
 }
 
 /* Header */
 header {
-  background-color: white;
+  background-color: var(--background-color);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -32,6 +38,28 @@ header .logo {
   font-size: 20px;
   cursor: pointer;
 }
+/* Boutons transparents */
+button, .btn {
+  background-color: transparent;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  color: var(--primary-color);
+}
+
+button:hover, .btn:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Taille de l'image du titre */
+header .logo {
+  max-width: 250px; /* Réduit la taille de l'image */
+}
+
+/* Style du bouton Contact */
+.contact-btn {
+  margin-left: 10px;
+  padding: 5px 10px;
+  font-size: 16px;
+}
 
 /* Séparateur en feuilles */
 .separator {
@@ -39,7 +67,7 @@ header .logo {
   background-size: contain;
   background-repeat: repeat-x;
   height: 40px;
-  background-color: #BFD8A5;
+  background-color: var(--secondary-color);
 }
 
 /* Navigation */
@@ -68,7 +96,7 @@ nav ul li {
 
 nav ul li a {
   text-decoration: none;
-  color: #3b341f;
+  color: var(--primary-color);
   font-weight: bold;
   position: relative;
 }
@@ -85,7 +113,7 @@ nav ul li a {
   position: absolute;
   top: 100%;
   left: 0;
-  background: white;
+  background: var(--background-color);
   border: 1px solid #ccc;
   border-radius: 5px;
   padding: 5px 0;
@@ -104,7 +132,7 @@ nav ul li a {
 }
 
 .dropdown-menu li a {
-  color: #3b341f;
+  color: var(--primary-color);
   text-decoration: none;
   display: block;
   padding: 8px 15px;
@@ -129,10 +157,68 @@ section {
   text-align: center;
 }
 
+/* Slider */
+/* Assurez-vous que le conteneur du slider est positionné relativement */
+.slider {
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  margin: auto;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Conteneur des slides */
+.slider-container {
+  display: flex;
+  transition: transform 0.8s ease-in-out;
+}
+
+/* Style des slides */
+.slide {
+  width: 100%;
+  flex-shrink: 0;
+  object-fit: cover;
+}
+
+/* Boutons de navigation */
+button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(106, 106, 106, 0.188);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 24px;
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+button:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+/* Suppression des cadres des images */
+img {
+  border: none;
+}
+
+
+
+
 /* Footer */
 footer {
   background-color: #E3D9C6;
-  color: #3b341f;
+  color: var(--primary-color);
   text-align: left;
   padding: 20px;
 }
@@ -156,8 +242,25 @@ footer {
   width: 100%;
   height: 100px;
   padding: 8px;
-  border: 1px solid #3b341f;
+  border: 1px solid var(--primary-color);
   border-radius: 5px;
   font-size: 14px;
   resize: none;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  nav ul {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .slider {
+      max-width: 100%;
+  }
+
+  .footer-container {
+      flex-direction: column;
+      align-items: center;
+  }
 }
