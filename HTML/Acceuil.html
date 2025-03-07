@@ -2,9 +2,11 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Description de votre site">
     <title>Sunu-Tos</title>
-    <link rel="icon" href="..\images\Feuilles de neem Cycle Original.png" type="image/png">
+    <link rel="icon" href="../images/Feuilles de neem icone.png" type="image/png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="../CSS/style.css">
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
@@ -29,7 +31,6 @@
         </div>
     </header>
     <div class="separator"></div>
-    
     <nav class="menu">
         <ul>
             <li><a href="about.html">À propos / Qui sommes-nous ?</a></li>
@@ -68,6 +69,19 @@
             <div class="slider">
                 <p>Défilement des meilleures photos de projets.</p>
             </div>
+            <section class="slider position-relative overflow-hidden" aria-label="Slider d'images">
+            <div class="slider-container d-flex">
+                <img src="../images/berserk.jpg" class="slide img" alt="Projet 1">
+                <img src="../images/guts.jpg" class="slide img" alt="Projet 2">
+                <img src="../images/shanks_luffy.jpg" class="slide img" alt="Projet 3">
+            </div>
+            <button class="prev position-absolute start-0 top-50 translate-middle-y btn btn-dark" aria-label="Précédent">
+                &#10094;
+            </button>
+            <button class="next position-absolute end-0 top-50 translate-middle-y btn btn-dark" aria-label="Suivant">
+                &#10095;
+            </button>
+        </section>
         </section>
     </main>
     <div class="separator"></div>
@@ -84,5 +98,8 @@
             </div>
         </div>
     </footer>
+     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../JS/slide.js"></script>
 </body>
 </html>
