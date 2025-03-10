@@ -3,23 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Description de votre site">
-    <title>Sunu-Tos</title>
-    <link rel="icon" href="../images/Feuilles de neem icone.png" type="image/png">
+    <meta name="description" content="Découvrez l'association Sunu-Tos et son impact.">
+    <title>Sunu-Tos - Accueil</title>
+    <link rel="icon" href="../images/Feuilles_de_neem_icone.png" type="image/png">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="../CSS/style.css">
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body id="page-accueil">
+
     <header>
         <div class="menu-mobile">
             <i class="fas fa-bars"></i>
         </div>
         <div class="logo-container">
-            <a href="Acceuil.html"><img src="../images/Logo final C - slogan FR.png" alt="Sunu-Tos" class="logo"></a>
+                <a href="acceuil.html"><img src="..\images\Logo final C - slogan FR.png" alt="Sunu-Tos" class="logo"></a>
         </div>
         <div class="header-icons">
-            <i class="fas fa-search"></i>
             <div class="lang-select">
                 <select class="lang-dropdown" onchange="location = this.value;">
                     <option value="index.html">🇫🇷 Français</option>
@@ -27,79 +27,89 @@
                     <option value="index_wo.html">🇸🇳 Wolof</option>
                 </select>
             </div>
-            <a href="contact.html" class="contact-link">Contact</a>
         </div>
     </header>
+
     <div class="separator"></div>
-    <nav class="menu">
+
+    <nav id="mobile-menu" class="mobile-menu">
         <ul>
-            <li><a href="about.html">À propos / Qui sommes-nous ?</a></li>
+            <li><a href="à_propos.html">À propos</a></li>
             <li><a href="produits.html">Produits</a></li>
             <li><a href="projets.html">Projets</a></li>
             <li><a href="ressources.html">Ressources</a></li>
-            <li><a href="medias.html">Médias</a></li>
         </ul>
     </nav>
-    
+
     <main>
+        <!-- DESCRIPTION ASSOCIATION -->
         <section class="intro">
-            <h2>Description générale de l’association</h2>
-            <p>Objectifs brefs et impact de l’association.</p>
+            <h2>Qui sommes-nous ?</h2>
+            <p>Sunu-Tos est une association œuvrant pour la promotion des toilettes écologiques et du compostage au Sénégal.</p>
         </section>
-        
+
+        <!-- BANDEAU IMPACT -->
         <section class="impact">
-            <h2>Notre impact</h2>
+            <h2>Notre Impact</h2>
             <div class="bandeau-impact">
-                <p>Nombre de projets réalisés, personnes touchées, etc.</p>
+                <p>💧 <span id="toilettes-count">0</span> toilettes installées | 🌱 <span id="composteurs-count">0</span> composteurs fournis | 🏡 <span id="foyers-count">0</span> foyers sensibilisés</p>
             </div>
         </section>
-        
-        <section class="produit-vedette">
-            <h2>Produit en avant</h2>
-            <p>Un type de toilette au hasard.</p>
-        </section>
-        
-        <section class="medias">
-            <h2>Médias</h2>
-            <p>Podcasts, articles, et reportages sur notre association.</p>
-        </section>
-        
+        <!-- SLIDER DES PROJETS -->
         <section class="galerie">
             <h2>Nos projets en images</h2>
-            <div class="slider">
-                <p>Défilement des meilleures photos de projets.</p>
+            <div class="slider position-relative overflow-hidden">
+                <div class="slider-container d-flex">
+                    <img src="../images/projet1.jpg" class="slide img" alt="Projet 1">
+                    <img src="../images/projet2.jpg" class="slide img" alt="Projet 2">
+                    <img src="../images/projet3.jpg" class="slide img" alt="Projet 3">
+                </div>
+                <button class="prev btn btn-dark">&#10094;</button>
+                <button class="next btn btn-dark">&#10095;</button>
             </div>
-            <section class="slider position-relative overflow-hidden" aria-label="Slider d'images">
-            <div class="slider-container d-flex">
-                <img src="../images/berserk.jpg" class="slide img" alt="Projet 1">
-                <img src="../images/guts.jpg" class="slide img" alt="Projet 2">
-                <img src="../images/shanks_luffy.jpg" class="slide img" alt="Projet 3">
-            </div>
-            <button class="prev position-absolute start-0 top-50 translate-middle-y btn btn-dark" aria-label="Précédent">
-                &#10094;
-            </button>
-            <button class="next position-absolute end-0 top-50 translate-middle-y btn btn-dark" aria-label="Suivant">
-                &#10095;
-            </button>
         </section>
+
+        <!-- PRODUIT EN VEDETTE -->
+        <section class="produit-vedette">
+            <h2>Toilette écologique en avant</h2>
+            <div class="produit-container">
+                <img id="produit-image" src="" alt="Toilette en vedette">
+                <p id="produit-description"></p>
+                <a href="produits.html" class="btn">Voir plus</a>
+            </div>
+        </section>
+
+        <!-- MÉDIAS -->
+        <section class="medias">
+            <h2>Nos médias</h2>
+            <p>Retrouvez nos podcasts, articles et reportages.</p>
+            <a href="ressources.html" class="btn">Explorer</a>
+        </section>
+
+        <!-- APPEL À L'ACTION -->
+        <section class="soutien">
+            <h2>Agissez avec nous !</h2>
+            <div class="actions">
+                <a href="donation.html" class="btn">Faire un don</a>
+                <a href="benevolat.html" class="btn">Devenir bénévole</a>
+                <a href="contact.html" class="btn">Nous contacter</a>
+            </div>
         </section>
     </main>
+
     <div class="separator"></div>
-    
+
     <footer>
         <div class="footer-content">
-            <div class="contact">
-                <h2>Nous soutenir</h2>
-                <ul>
-                    <li><a href="donation.html">Faire un don</a></li>
-                    <li><a href="contact.html">Nous contacter</a></li>
-                    <li><a href="benevolat.html">Devenir bénévole</a></li>
-                </ul>
-            </div>
+            <p>&copy; 2025 Sunu-Tos - Tous droits réservés</p>
         </div>
     </footer>
-     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="../JS/slide.js"></script>
+    <script src="../JS/main.js"></script>
+
 </body>
 </html>
