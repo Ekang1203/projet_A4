@@ -72,3 +72,8 @@ $(document).ready(function () {
         if (e.key === "ArrowRight") nextSlide();
     });
 });
+// JavaScript pour basculer l'affichage du menu mobile
+document.querySelector('.menu-mobile i').addEventListener('click', function() {
+    var menu = document.getElementById('mobile-menu');
+    menu.classList.toggle('active'); // Bascule la classe 'active' pour afficher/masquer le menu
+});
