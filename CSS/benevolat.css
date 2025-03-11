@@ -1,0 +1,89 @@
+.form-benevolat {
+    max-width: 700px;
+    margin: auto;
+    padding: 30px;
+    border-radius: 8px;
+    background-color: rgba(191, 216, 165, 0.2);
+  }
+  
+  .form-benevolat form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: stretch;
+  }
+  
+  .form-benevolat .form-group {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+  }
+  
+  .form-benevolat .form-group label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: var(--primary-color);
+  }
+  
+  .form-benevolat .form-group input,
+  .form-benevolat .form-group textarea {
+    padding: 12px;
+    border: 1px solid var(--primary-color);
+    border-radius: 5px;
+    font-size: 16px;
+    width: 100%;
+  }
+  /*Carb il y a conflit avec les boutons de mon fichier style.css*/
+  .form-benevolat button.btn-envoyer {
+    position: relative !important; 
+    transform: none !important; 
+    top: auto !important; 
+    left: auto !important; 
+    right: auto !important; 
+    bottom: auto !important; 
+    margin-top: 20px;
+    align-self: center;
+    padding: 12px 20px;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .form-benevolat button.btn-envoyer:hover {
+    background-color: var(--primary-color);
+    color: white;
+  }
+  
+  /* Section partage réseaux sociaux */
+.partage {
+    margin-top: 30px;
+    text-align: center;
+  }
+  
+  .btn-social {
+    display: inline-block;
+    color: white;
+    padding: 8px 16px;
+    margin: 5px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .fb {
+    background-color: #3b5998;
+  }
+  
+  .twitter {
+    background-color: #1DA1F2;
+  }
+  
+  .linkedin {
+    background-color: #0e76a8;
+  }
+  
+
+  
