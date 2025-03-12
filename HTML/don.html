@@ -2,40 +2,47 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Faire un Don - SunuTos</title>
-    <link rel="stylesheet" href="../CSS/style.css" href="../CSS/dons.css">
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script> <!-- Importation des icônes FontAwesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Découvrez l'association Sunu-Tos et son impact.">
+    <title>Sunu-Tos - Accueil</title>
+    <link rel="icon" href="../images/Feuilles_de_neem_icone.png" type="image/png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../CSS/style.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
-<body id="page-dons">
+<body id="page-accueil">
 
     <header>
-        <a href="accueil.html" class="logo">
-            <i class="fas fa-home"></i>
-          </a>
-          <h1 class="site-title">SunuTos</h1>
-          <div class="lang">
-            <span>🌍</span>
-          </div>
+        <div class="menu-mobile">
+            <i class="fas fa-bars"></i>
+        </div>
+        <div class="logo-container">
+                <a href="acceuil.html"><img src="..\images\Logo final C - slogan FR.png" alt="Sunu-Tos" class="logo"></a>
+        </div>
+        <div class="header-icons">
+            <div class="lang-select">
+                <select class="lang-dropdown" onchange="location = this.value;">
+                    <option value="acceuil.html">🇫🇷 Français</option>
+                    <option value="acceuil_en.html">🇬🇧 English</option>
+                    <option value="acceuil_wo.html">🇸🇳 Wolof</option>
+                </select>
+            </div>
+        </div>
     </header>
 
     <div class="separator"></div>
 
+    <nav id="mobile-menu" class="mobile-menu">
+        <ul>
+            <li><a href="à_propos.html">À propos</a></li>
+            <li><a href="produits.html">Produits</a></li>
+            <li><a href="projets.html">Projets</a></li>
+            <li><a href="ressources.html">Ressources</a></li>
+        </ul>
+    </nav>
+       
+
     <nav>
-        <div class="nav-container">
-            <ul>
-                <li><i class="fas fa-home"></i> <a href="accueil.html">Accueil</a></li>
-    
-                <li class="dropdown">
-                    <a href="##"><i class="fas fa-info-circle"></i>À propos <span class="arrow">▼</span></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="projets.html">Projets</a></li>
-                        <li><a href="parten_et_cont.html">Partenaires et Contact</a></li>
-                        <li><a href="histoire_assoc.html">Histoire de l'association</a></li>
-                    </ul>
-                </li>
-    
                 <li class="dropdown">
                     <a href="#"><i class="fas fa-book"></i>Documentation <span class="arrow">▼</span></a>
                     <ul class="dropdown-menu">
@@ -74,22 +81,18 @@
 
     <div class="separator"></div>
 
-    <footer>
-        <div class="footer-container">
-            <div class="contact-section">
-                <h2>Contactez-nous :</h2>
-                <ul>
-                    <li>Email</li>
-                    <li>Réseaux sociaux</li>
-                    <li>Téléphone</li>
-                </ul>
-            </div>
-
-            <div class="comment-section">
-                <h2>Commentaire</h2>
-                <textarea placeholder="Écrivez votre commentaire ici..."></textarea>
-            </div>
+     <!-- APPEL À L'ACTION -->
+     <section class="soutien">
+        <h2>Agissez avec nous !</h2>
+        <div class="actions">
+            <a href="don.html" class="btn">Faire un don</a>
+            <a href="benevolat.html" class="btn">Devenir bénévole</a>
+            <a href="contact.html" class="btn">Nous contacter</a>
         </div>
+    </section>
+     <!-- FOOTER -->
+     <footer class="text-center p-3">
+        <p>&copy; 2025 Sunu-Tos - Tous droits réservés</p>
     </footer>
 
 </body>
