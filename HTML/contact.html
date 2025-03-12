@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Contactez Sunu-Tos pour toute information ou collaboration.">
+    <title>Sunu-Tos - Contact</title>
+    <link rel="icon" href="../images/Feuilles_de_neem_icone.png" type="image/png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="stylesheet" href="../CSS/contact.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+</head>
+<body id="page-contact">
+
+    <!-- HEADER -->
+    <header>
+        <div class="logo-container">
+            <a href="acceuil.html"><img src="../images/Logo final C - slogan FR.png" alt="Sunu-Tos" class="logo"></a>
+        </div>
+        <div class="header-icons">
+            <div class="lang-select">
+                <select id="lang-select">
+                    <option value="fr">🇫🇷 Français</option>
+                    <option value="en">🇬🇧 English</option>
+                    <option value="wo">🇸🇳 Wolof</option>
+                </select>
+            </div>
+        </div>
+    </header>
+
+    <div class="separator"></div>
+
+    <!-- NAVIGATION -->
+    <nav id="mobile-menu">
+        <ul>
+            <li><a href="à_propos.html">À propos</a></li>
+            <li><a href="produits.html">Produits</a></li>
+            <li><a href="projets.html">Projets</a></li>
+            <li><a href="ressources.html">Ressources</a></li>
+        </ul>
+    </nav>
+
+    <!-- CONTENU PRINCIPAL -->
+    <main>
+        <section class="contact-info">
+            <h2>Contactez-nous</h2>
+            <p>Nous sommes à votre disposition pour toute question, partenariat ou information.</p>
+            
+            <div class="contact-details">
+                <p><i class="fas fa-map-marker-alt"></i> Adresse : Dakar, Sénégal</p>
+                <p><i class="fas fa-phone"></i> Téléphone : +221 77 123 45 67</p>
+                <p><i class="fas fa-envelope"></i> Email : contact@sunutos.org</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </section>
+
+        <!-- FORMULAIRE DE CONTACT -->
+        <section class="contact-form">
+            <h2>Envoyez-nous un message</h2>
+            <form id="contactForm">
+                <div class="form-group">
+                    <label for="nom">Nom</label>
+                    <input type="text" id="nom" name="nom" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+
+                <button type="submit" class="btn-envoyer">Envoyer</button>
+            </form>
+            <p id="confirmationMessage" class="hidden">✅ Votre message a bien été envoyé !</p>
+        </section>
+
+        <!-- CARTE INTERACTIVE -->
+        <section class="map-container">
+            <h2>Notre localisation</h2>
+            <div id="map"></div>
+        </section>
+    </main>
+     <!-- APPEL À L'ACTION -->
+     <section class="soutien">
+        <h2>Agissez avec nous !</h2>
+        <div class="actions">
+            <a href="don.html" class="btn">Faire un don</a>
+            <a href="benevolat.html" class="btn">Devenir bénévole</a>
+            <a href="contact.html" class="btn">Nous contacter</a>
+        </div>
+    </section>
+
+    <div class="separator"></div>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 Sunu-Tos - Tous droits réservés</p>
+        </div>
+    </footer>
+
+    <!-- SCRIPTS JS -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="../JS/lang.js"></script>
+    <script src="../JS/contact.js"></script>
+
+</body>
+</html>
