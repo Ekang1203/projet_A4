@@ -1,0 +1,21 @@
+@extends('layouts.app')
+
+@section('content')
+<div class="container">
+    <h1>Modifier le contenu du site</h1>
+    
+    @if(session('success'))
+        <div class="alert alert-success">{{ session('success') }}</div>
+    @endif
+
+    <form action="{{ route('admin.content.update') }}" method="POST">
+        @csrf
+        @foreach($contenus as $contenu)
+            <label for="{{ $contenu->section }}">{{ ucfirst(str_replace('_', ' ', $contenu->section)) }}</label>
+            <textarea name="{{ $contenu->section }}" id="{{ $contenu->section }}" rows="4">{{ $contenu->contenu }}</textarea>
+            <br>
+        @endforeach
+        <button type="submit">Mettre à jour</button>
+    </form>
+</div>
+@endsection
